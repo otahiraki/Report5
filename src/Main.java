@@ -1,14 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        String str = null; // 初期値として null を代入
+        String str = "壱百満";
 
         try {
-            System.out.println(str.length());
-        } catch (NullPointerException e) {
-            // 条件2:
-            System.out.println("NullPointerExceptionが発生しました。");
-
-            // 条件3: getMessage()
+            int value = Integer.parseInt(str);
+            System.out.println("変換された値: " + value);
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatExceptionが発生しました。");
             System.out.println(e.getMessage());
         }
     }
